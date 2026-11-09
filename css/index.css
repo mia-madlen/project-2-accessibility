@@ -8,6 +8,69 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.screen-reader-text {
+  position: absolute; /*Positions the link absolutely on the page, allowing it to be placed anywhere.*/
+  left: -9999px; /*Moves the link far off-screen to the left, making it invisible to sighted users.*/
+  z-index: 999; /*Sets a high z-index, ensuring that the link will be on top of other page elements if it becomes visible.*/
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0; /*Sets the link's opacity to 0, making it fully transparent and invisible.*/
+}
+
+.screen-reader-text:focus {
+  left: 50%; /* When the link receives focus (e.g., when a keyboard user tabs to it), it is repositioned horizontally to the centre of the screen.*/
+  transform: translateX(-50%); /*This centres the link horizontally by moving it back to the left by 50% of its own width.*/
+  opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
+}
+
+header:nth-of-type(1) {
+    display: inline;
+}
+
+nav {
+    background-color: #31688E;
+    height: 5rem;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: none;
+    height: auto;
+    border-top: 4px solid #111E38;
+    flex-direction: column;
+}
+
+nav #bars {
+    display: flex;
+    color: #FFFAF2;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+nav ul li {
+      display: flex;
+      font-size: 1.5rem;
+      margin: 2rem auto 1rem auto;
+      align-self: center;
+    }
+
+nav .show {
+      display: flex;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      padding: 0;
+      background-color: #FFFAF2;
+      width: 100%;
+      height: 45rem;
+      z-index: 1;
+    }
 
 /*Hero section*/
 
@@ -31,9 +94,12 @@ body {
 /*hjælp section*/
 
 .hjælp-section {
-    padding: 2.8rem 1.88rem;
-    display: flex;
-    justify-content: center;
+    width: 24.1rem;
+    min-height: 14rem;
+    background-color: #C15400;
+    border-radius: 1.6rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 4rem auto;
 }
 
 .hjælp-box {
@@ -41,30 +107,52 @@ body {
     width: 100%;
     height: 13rem;
     max-width: 20rem;
-    padding: 35px 25px;
+    padding: 0 0.3rem 1.6rem 1rem;
     border-radius: 1.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.hjælp-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2rem 1rem 1rem;
+}
+
+
 .hjælp-content p {
-    font-size: 19px;
+    font-size: 1.19rem;
     line-height: 28.5px;
-    margin-bottom: 1.5rem;
-    margin-left: 1.5rem;
+    margin: 1rem 3rem 1rem 1.5rem;
     color: #FFFAF2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-phone-volume {
+    font-size: 4rem;
+    color: #FFFAF2;    
 }
 
 .hjælp-button {
-    display: inline-block;
+    display: block;
     background-color: #111E38;
     color: #FFFAF2;
+    text-decoration: none;
     font-size: 1.25rem;
     font-weight: bold;
-    padding: 0.75rem 1.1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     border-radius: 1.6rem;
-    margin-left: 1rem;
+    border: 0.3rem solid #FFFAF2;
+    text-align: center;
+    margin: -3rem 1rem 1rem 1rem;
+}
+
+.hjælp-button:hover {
+    background-color: #31688E;
 }
 
 
@@ -103,115 +191,100 @@ body {
 
 /*Blog section*/
 
-.blog-section{
+.blog-section {
     background-color:#C0CCD5;
-    padding: 1.5rem 0 5rem;
-    overflow: hidden;
+    padding: 1rem 1.375rem 1.5rem;
 }
 
 .blog-section h2 {
     text-align: center;
     color: #111E38;
     font-size: 2rem;
-    margin-bottom: 1.2rem;
+    margin: 2rem auto 2rem auto;
 }
 
-/*Slider*/
-
-.slider-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.blog-slider {
-    display: flex;
-    gap: 2rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    
-    width: 100%;
-    padding: 0 calc((100% - min(68vw, 22.8rem)) / 2);
-}
-
-.blog-slider::-webkit-scrollbar {
-    display: none;
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .blog-card {
-
-    flex: 0 0 min(68vw, 22.8rem);
-    min-height: 50rem;
     background-color: #111E38;
     border-radius: 1.6rem;
+    overflow: hidden;
 
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
 
-    padding: 2.5rem;
+    min-height: 27.5rem;
+    padding: 1.5rem;
+}
 
-    scroll-snap-align: center;
+.blog-image {
+    width: 95%;
+    margin: 1rem auto 1rem auto;
+    flex-grow: 1;
+    align-self: center;
+    border-radius: 1.4rem;
 }
 
 .blog-content {
-    color: #FFFAF2;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .blog-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 1.7rem;
+    color: #FFFAF2;
+    margin: 2rem 0 1rem 1rem;
 }
 
 .blog-content p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: 2.5rem;
+    color: #FFFAF2;
+    margin: 1rem 1rem 1rem 1rem;
 }
 
 .blog-button {
     display: inline-block;
-    text-decoration: none;
-    color: #FFFAF2;
     background-color: #31688E;
-    border: 0.3rem solid #FFFAF2;
-    border-radius: 1.6rem;
-    padding: 0.7rem 1rem;
+    color: #FFFAF2;
     font-size: 1.125rem;
     font-weight: bold;
-    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0.3rem solid #FFFAF2;
+    border-radius: 1.6rem;
+    margin: 2rem auto 2rem auto;
 }
 
-
-/*slider pilene*/
-
-.slider-arrow {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    border: 0.3rem solid #111E38;
-    background-color: #FFFAF2;
-    color: #111E38;
-    font-size: 2.5rem;
-    line-height: 1;
-    cursor: pointer;
+.blog-button:hover {
+    background-color: #111E38;
 }
 
-    
-.slider-arrow.prev {
-    left: 1.5rem
+.view-all-button {
+    display: inline-block;
+    background-color: #111E38;
+    color: #FFFAF2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 0.3rem solid #FFFAF2;
+    border-radius: 1.6rem;
+    margin: 2rem auto 2rem auto;
 }
 
-.slider-arrow.next {
-    right: 1.5rem;
+.view-all-button:hover {
+    background-color: #31688E;
 }
 
 
@@ -262,3 +335,43 @@ footer {
 
 
     
+
+/*Desktop version*/
+
+@media screen and (min-width: 769px) {
+
+nav #bars {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul.show {
+    position: static;
+    width: auto;
+    background-color: transparent;
+}
+
+nav ul a:hover {
+    color: #111E38;
+}
+
+nav a {
+    color: #FFFAF2;
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+}

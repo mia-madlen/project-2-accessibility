@@ -5,26 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forside</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/2dcce8b330.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    
-     <!--Navigation-->
-    <div class="container">
-        <header>
-             <nav>
-                <ul>
-                    <li><a href="#">Om</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Kontakt</a></li>
-              </ul>
-            </nav>
-        </header>
+    <!--Skip til hovedindhold (ligger altid i toppen af body)-->
+    <a href="#hovedindhold" class="screen-reader-text">hop ned til hovedindhold</a>
 
-    <main>
+    <header>
+      <nav>
+        <a href="#">Logo</a>
+        <button
+          id="bars"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open navigation">
+          
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+ 
+        <!--Navigation-->
+        <ul id="menu">
+          <!-- id="menu" references the button with aria-controls -->
+          <li><a class="active" href="#">Forside</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Inspiration</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <main id="Hovedindhold">
         <!-- hero section -->
          <section class="hero">
             <h1>Livsbalance</h1>
-            <img src="img/F38732DD-FE21-4924-BCBC-510B5C8E68FC.png" alt="Illustration af en kvinde omgivet af planter">
+            <img src="img/F38732DD-FE21-4924-BCBC-510B5C8E68FC.png" alt="">
          </section>
 
 
@@ -33,18 +52,18 @@
             <div class="hjælp-box">
 
                 <div class="hjælp-content">
-                <p>
+                    <p>
                     Find hjælp, <br>
                     rådgivning <br>
                     og forståelse!
-                </p>
-
-                <button class="hjælp-button">Har du brug for hjælp</button>
+                    </p>
+                    <i class="fa-solid fa-phone-volume"></i>
                 </div>
-
-            <!--indsætte phone icon-->
             </div>
+             <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
           </section>
+
+
 
           <!--tekst section-->
           <section class="tekst-section">
@@ -52,6 +71,8 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias a cumque corrupti exercitationem? Culpa, ad ut libero nihil nisi vel tempore ipsam, corporis quidem blanditiis accusamus ipsa assumenda, consectetur aut.
             </p>
           </section>
+
+
 
           <!--citat section-->
           <section class="citat-section-1">
@@ -61,49 +82,62 @@
             </blockquote>
           </section>
 
+
+
           <!--blog sektion-->
           <section class="blog-section">
             <h2>Blogindlæg</h2>
 
-            <div class="slider-wrapper">
-                <button class="slider-arrow prev" aria-label="Forrige blogindlæg"></button>
-
-                <div class="blog-slider" id="blog-slider">
-
-                    <article class="blog-card">
-                        <div class="blog-content">
-                            <h3>En god overskrift</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque illo ipsum esse quo totam consectetur magnam cupiditate veritatis omnis! Quo eum aut placeat in doloremque quae nisi. Id, omnis.
-                            </p>
-                                <button class="blog-button">Læs det fulde indlæg</button>
-                        </div>
-                    </article>
+            <div class="blog-grid">
+               
+                <!--Blogindlæg 1-->
+                <article class="blog-card">
+                    <img class="blog-image" src="/img/FC49F28E-8DFC-44B9-85C0-0CDCE296D475_1_105_c.jpeg" alt="">
 
 
-                    <article class="blog-card">
-                        <div class="blog-content">
-                            <h3>En god overskrift</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque illo ipsum esse quo totam consectetur magnam cupiditate veritatis omnis! Quo eum aut placeat in doloremque quae nisi. Id, omnis.
-                            </p>
-                                <button class="blog-button">Læs det fulde indlæg</button>
-                        </div>
-                    </article>
+                    <div class="blog-content">
+                        <h3>En god overskrift</h3>
 
-                    <article class="blog-card">
-                        <div class="blog-content">
-                            <h3>En god overskrift</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque illo ipsum esse quo totam consectetur magnam cupiditate veritatis omnis! Quo eum aut placeat in doloremque quae nisi. Id, omnis.
-                            </p>
-                                <button class="blog-button">Læs det fulde indlæg</button>
-                        </div>
-                    </article>
-                </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
+                        </p>
 
-                <button class="slider-arrow next" aria-label="Næste blogindlæg"></button>
+                        <a class="blog-button" href="#">Læs det fulde indlæg</a>
+                    </div>
+                </article>
 
+                <!--Blogindlæg 2-->
+                <article class="blog-card">
+                    <img class="blog-image" src="/img/FC49F28E-8DFC-44B9-85C0-0CDCE296D475_1_105_c.jpeg" alt="">
+
+
+                    <div class="blog-content">
+                        <h3>En god overskrift</h3>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
+                        </p>
+
+                        <a class="blog-button" href="#">Læs det fulde indlæg</a>
+                    </div>
+                </article>
+
+                <!--Blogindlæg 3-->
+                <article class="blog-card">
+                    <img class="blog-image" src="/img/FC49F28E-8DFC-44B9-85C0-0CDCE296D475_1_105_c.jpeg" alt="">
+
+
+                    <div class="blog-content">
+                        <h3>En god overskrift</h3>
+
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
+                        </p>
+
+                        <a class="blog-button" href="#">Læs det fulde indlæg</a>
+                    </div>
+                </article>
+
+                <a class="view-all-button" href="#">Se alle blogindlæg</a>
             </div>
           </section>
-
 
           <!--citat sektion-->
 
@@ -113,18 +147,20 @@
             </blockquote>
         </section>
 
-        <img class="blomsterdreng" src="img/BD578D58-96A8-4C1B-80A5-D03D75622DD9.png" alt="Illustration af en mand omgivet af planter">
+        <img class="blomsterdreng" src="img/BD578D58-96A8-4C1B-80A5-D03D75622DD9.png" alt="">
 
     </main>
+
+
 
       <!--footer section-->
 
         <footer>
-            <section>
+            <address>
                 <h4>Kontakt</h4>
                     <p>Telefonnummer: <a href="tel:2233642526">Ring til os</a></p>
                     <p>E-Mail: <a href="mailto:nera@iba.dk">Skriv til os</a></p>
-            </section>
+            </address>
             <section class="social-media">
                 <h4>Sociale medier</h4>
                     <a href="#">Instagram</a>
