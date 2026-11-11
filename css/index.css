@@ -42,6 +42,7 @@ nav ul {
     height: auto;
     border-top: 4px solid #111E38;
     flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav #bars {
@@ -51,6 +52,16 @@ nav #bars {
     cursor: pointer;
     border: none;
     background-color: transparent;
+}
+
+nav #magnifying-glass {
+    display: flex;
+    color: #FFFAF2;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-left: 16rem;
 }
 
 nav ul li {
@@ -68,38 +79,67 @@ nav .show {
       padding: 0;
       background-color: #FFFAF2;
       width: 100%;
-      height: 45rem;
+      height: 55rem;
       z-index: 1;
     }
 
+.search-icon {
+    text-decoration-style: none;
+}
+
 /*Hero section*/
+
+.hero-wrapper {
+    background: none;
+}
 
 .hero {
     text-align: center;
-    padding-top: 35px;
+    position: relative;
+    isolation: isolate;
+    padding-top: 2rem;
 }
 
 .hero h1 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 1.25rem;
+    margin-bottom: -2rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    position: relative;
+    z-index: 1;
 }
+
+
+/*Gradient bag billedet*/
+    .hero::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 35%;
+        background: linear-gradient(to bottom, transparent, #111E38);
+        z-index: -1;
+    }
+
+
 
 /*hjælp section*/
 
 .hjælp-section {
-    width: 24.1rem;
-    min-height: 14rem;
+    width: 18rem;
+    min-height: 8rem;
     background-color: #C15400;
     border-radius: 1.6rem;
-    padding: 1rem 1rem 1rem 1rem;
-    margin: 4rem auto;
+    margin: 3.5rem auto;
 }
 
 .hjælp-box {
@@ -125,7 +165,7 @@ nav .show {
 .hjælp-content p {
     font-size: 1.19rem;
     line-height: 28.5px;
-    margin: 1rem 3rem 1rem 1.5rem;
+    margin: 1rem 1rem 1rem 1rem;
     color: #FFFAF2;
     display: flex;
     justify-content: space-between;
@@ -148,7 +188,7 @@ nav .show {
     border-radius: 1.6rem;
     border: 0.3rem solid #FFFAF2;
     text-align: center;
-    margin: -3rem 1rem 1rem 1rem;
+    margin: -4rem 1rem 1rem 1rem;
 }
 
 .hjælp-button:hover {
@@ -158,11 +198,17 @@ nav .show {
 
 /*Text section*/
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
 .tekst-section {
     width: 85%;
     max-width: 40rem;
     margin: 0 auto;
-    padding: 1rem 0 3.5rem;
+    padding: 0 0 3.5rem;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25rem;
     line-height: 1.875rem;
@@ -184,7 +230,7 @@ nav .show {
 .citat-section-1 blockquote {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.625rem;
-    margin-right: 4rem;
+    margin-right: 1rem;
     text-align: right;
 }
 
@@ -196,7 +242,7 @@ nav .show {
     padding: 1rem 1.375rem 1.5rem;
 }
 
-.blog-section h2 {
+.blog-section h3 {
     text-align: center;
     color: #111E38;
     font-size: 2rem;
@@ -221,6 +267,7 @@ nav .show {
 
     min-height: 27.5rem;
     padding: 1.5rem;
+    margin-bottom: 1.5rem
 }
 
 .blog-image {
@@ -228,7 +275,7 @@ nav .show {
     margin: 1rem auto 1rem auto;
     flex-grow: 1;
     align-self: center;
-    border-radius: 1.4rem;
+    border-radius: 1rem;
 }
 
 .blog-content {
@@ -237,7 +284,7 @@ nav .show {
     align-items: flex-start;
 }
 
-.blog-content h3 {
+.blog-content h4 {
     font-size: 1.5rem;
     color: #FFFAF2;
     margin: 2rem 0 1rem 1rem;
@@ -280,7 +327,7 @@ nav .show {
     padding: 1rem 2rem 1rem 2rem;
     border: 0.3rem solid #FFFAF2;
     border-radius: 1.6rem;
-    margin: 2rem auto 2rem auto;
+    margin: -1rem auto 3rem auto;
 }
 
 .view-all-button:hover {
@@ -297,24 +344,30 @@ nav .show {
     margin-top: 8rem;
     padding: 1.25rem;
     border-radius: 0 1.56rem 1.56rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
- .citat-section-2 blockquote {
+.citat-section-2 blockquote {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.625rem;
-    margin-right: 2rem;
     text-align: right;
     height: 4rem;
-     padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 0 1rem 1rem;
+
 }
 
 .blomsterdreng {
-    position: absolute;
-    width: 55%;
-    height: 50%;
+    position: top, right, bottom, left;
+    width: 45vh;
+    height: 50vh;
     margin-top: -18rem;
-    margin-left: -4rem;
+    margin-left: -5rem;
+    
 }
+
+
+/*Footer*/
 
 footer section:nth-of-type(1){
     margin-bottom: 1rem;
@@ -323,26 +376,95 @@ footer section:nth-of-type(1){
 footer {
     background-color: #31688E;
     color: #FFFAF2;
-    margin-top: 4.5rem;
-    padding: 2rem;
+    margin-top: -2rem;
+    padding: 4rem 1rem 3rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+
+/*Kontakt*/
+
+footer address {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+footer address p, footer address a, footer .social-media a {
+    font-size: 1.125rem;
+    margin: 0.6rem 0 1rem;
+    color: #FFFAF2;
+}
+
+.fa-envelope {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.fa-phone {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+
+/*social media*/
 
 .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-media h5 {
+    margin: 3rem auto -1rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+.social-media a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.fa-instagram {
+    font-size: 3.1rem;
+}
     
+.fa-square-facebook {
+    font-size: 3rem;
+}
+
+.fa-square-linkedin {
+    font-size: 3rem;
 }
 
 
-    
+
 
 /*Desktop version*/
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
+
+
+/*navigation*/
+
 
 nav #bars {
     display: none;
 }
+
 
 nav ul {
     display: flex;
@@ -369,9 +491,138 @@ nav ul a:hover {
 nav a {
     color: #FFFAF2;
     margin: 1rem 1rem 2rem 1rem;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     font-size: 1.5rem;
     text-decoration: none;
   }
+
+  /*Hero og hjælp*/
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    min-height: 37rem;
+    position: relative;
+    background: linear-gradient(to bottom, #FFFAF2 65%, #111E38 100%);
+  }
+
+  /*Fjern mobilgradienten*/
+  .hero::after {
+    display: none;
+  }
+
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hjælp-section {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+
+
+  /*Tekst og citat*/
+  .intro-wrapper {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .tekst-section {
+    width: 100%;
+    margin: 4rem 0 2rem 5rem;
+  }
+
+  .citat-section-1 {
+    margin-top: 4rem;
+    height: 8rem;
+  }
+
+  .citat-section-1 blockquote {
+    text-align: center;
+    padding-left: 7rem;
+    font-size: 2.5rem;
+  }
+
+
+
+
+
+/*Citat 2*/
+
+.citat-section-2 {
+    margin-right: 37%;
+    height: 8rem;
+}
+
+.citat-section-2 blockquote {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.blomsterdreng {
+    position: absolute;
+    right: 0;
+    height: 50%;
+}
+
+
+/*Blog*/
+
+.blog-image {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.blog-section {
+    padding: 3rem 4rem;
+}
+
+.blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blog-card {
+    min-height: 30rem;
+}
+
+.view-all-button {
+    grid-column: 1 /-1;
+    justify-content: center;
+}
+
+
+/*footer*/
+
+footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 0 5rem 2rem;
+}
+
+footer address {
+    margin-right: -1rem;
+    margin-left: 2rem;
+}
+
+footer .social-media {
+    margin-right: -2rem;
+}
+
+
+
+
+
+
+
+
+
 
 }

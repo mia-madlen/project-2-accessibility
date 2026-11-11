@@ -5,8 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktside</title>
     <link rel="stylesheet" href="css/contact.css">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/2dcce8b330.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <a href="#hovedindhold" class="screen-reader-text">hop ned til hovedindhold</a>
+
+    <!--Navigation-->
+    <header>
+
+
+    </header>
+
+
+<main id="hovedindhold">
+
+    <!--Brødkrummesti-->
+
+    <section class="kontakt-intro">
+        <div class="kontaktkort">
+            <h1>Kontakt</h1>
+            <p>Mia-Madlen Mertz</p>
+            <p><em>Psykolog</em></p>
+
+            <address class="kontaktoplysninger">
+                <a href="tel:+4530567359">
+                    <i class="fa-solid fa-phone-volume"></i>+45 30 56 73 59
+                </a>
+
+                <a href="mailto:livsbalance@info.dk">
+                    <i class="fa-regular fa-envelope"></i>livsbalance@info.dk
+                </a>
+            </address>
+        </div>
+
+            <!-- hjælp section -->
+        <div class="hjælp-box">
+            <p>
+                Find hjælp, <br>
+                rådgivning <br>
+                og forståelse!
+            </p>
+                
+            <i class="fa-solid fa-phone-volume"></i>
+            
+            <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
+        </div>
     
+        <!--Citat sektion-->
+        <blockquote>
+            <p>"Plads til at være dig!"</p>
+        </lockquote>
+    </section>
+
+
+    <!--Kontaktform--> 
+     <section class="kontaktform">
+        <h1>Kontaktformular</h1>
+        <p class="kontakt-tekst">Skriv gerne via formularen, <br> hvis du har noget på hjertet eller har spørgsmål, så vender jeg tilbage til dig!</p>
+
+        
+        <form>
+            <!--Navn, E-mail og Telefon-->
+            <label class="visually-hidden" for="navn">Navn*</label>
+            <input id="navn" type="text" placeholder="Navn*" required>
+
+            <label class="visually-hidden" for="mail">E-mail</label>
+            <input id="mail" type="email" placeholder="E-Mail*" required>
+
+            <label class="visually-hidden" for="tel">Telefon</label>
+            <input id="tel" type="tel" placeholder="Telefon">
+
+
+
+            <!--Besked-->
+            <label class="visually-hidden" for="besked">Besked*</label>
+            <textarea id="besked" cols="30" rows="10" placeholder="Besked*" required></textarea>
+
+           
+            <!--Samtykke-->
+            <input id="samtykke" type="radio" name="kontakt">
+            <label class="samtykke" for="samtykke">Jeg giver samtykke til, at disse data må behandles og gemmes med formål at etablere kontakt.*</label> 
+                <p class="samtykke">* Angiver obligatoriske felter</p>
+
+            <!--Submit-->
+            <input type="submit" name="submit" value="Send besked">
+
+        </form>
+     </section>
+     
+     
+    <!--footer section-->
+        <footer>
+            <address>
+                <h4>Kontakt</h4>
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        Mail: <a href="mailto:livsbalance@info">livsbalance@info.dk</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        Telefon: <a href="tel:+4530567359">+45 30 56 73 59</a>
+                    </p>
+            </address>
+
+            <section class="social-media">
+                <h4>Sociale medier</h4>
+                    <a href="#"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i>Facebook</a>
+                    
+                    <a href="#"><i class="fa-brands fa-square-linkedin"></i>Linkedin</a>                
+            </section>
+        </footer>
+
+</main>
 </body>
 </html>

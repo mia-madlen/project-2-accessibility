@@ -16,34 +16,46 @@
     <header>
       <nav>
         <a href="#">Logo</a>
+        <button 
+          id="magnifying-glass"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open seach">
+          
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+ 
         <button
           id="bars"
           aria-expanded="false"
           aria-controls="menu"
           aria-label="open navigation">
           
-          <i class="fa-solid fa-magnifying-glass"></i>
           <i class="fa-solid fa-bars"></i>
         </button>
- 
+       
         <!--Navigation-->
         <ul id="menu">
           <!-- id="menu" references the button with aria-controls -->
           <li><a class="active" href="#">Forside</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Inspiration</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="/contact.html">Kontakt</a></li>
+
         </ul>
       </nav>
     </header>
 
 
 
-    <main id="Hovedindhold">
+    <main id="hovedindhold">
         <!-- hero section -->
+
+    <div class="hero-wrapper">
          <section class="hero">
             <h1>Livsbalance</h1>
-            <img src="img/F38732DD-FE21-4924-BCBC-510B5C8E68FC.png" alt="">
+            <img src="/img/C7D19E5D-03D5-4D6F-94DA-14FCCA7D7B10.png" alt="">
          </section>
 
 
@@ -62,17 +74,16 @@
             </div>
              <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
           </section>
+    </div>
 
-
-
+    <div class="intro-wrapper">
           <!--tekst section-->
           <section class="tekst-section">
+            <h2>Overskrift</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias a cumque corrupti exercitationem? Culpa, ad ut libero nihil nisi vel tempore ipsam, corporis quidem blanditiis accusamus ipsa assumenda, consectetur aut.
             </p>
           </section>
-
-
 
           <!--citat section-->
           <section class="citat-section-1">
@@ -81,12 +92,12 @@
                 begynder indefra"
             </blockquote>
           </section>
-
+    </div>
 
 
           <!--blog sektion-->
           <section class="blog-section">
-            <h2>Blogindlæg</h2>
+            <h3>Blogindlæg</h3>
 
             <div class="blog-grid">
                
@@ -96,7 +107,7 @@
 
 
                     <div class="blog-content">
-                        <h3>En god overskrift</h3>
+                        <h4>En god overskrift</h4>
 
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
                         </p>
@@ -111,7 +122,7 @@
 
 
                     <div class="blog-content">
-                        <h3>En god overskrift</h3>
+                        <h4>En god overskrift</h4>
 
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
                         </p>
@@ -126,7 +137,7 @@
 
 
                     <div class="blog-content">
-                        <h3>En god overskrift</h3>
+                        <h4>En god overskrift</h4>
 
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi magni quod reiciendis voluptates autem, veritatis enim excepturi consectetur dolorem exercitationem unde, rerum suscipit aliquam provident doloremque debitis. Excepturi, perferendis suscipit?
                         </p>
@@ -139,33 +150,41 @@
             </div>
           </section>
 
-          <!--citat sektion-->
 
+          <!--citat sektion-->
         <section class="citat-section-2">
             <blockquote>
                 "Du er nok"
             </blockquote>
         </section>
-
         <img class="blomsterdreng" src="img/BD578D58-96A8-4C1B-80A5-D03D75622DD9.png" alt="">
-
     </main>
 
 
 
       <!--footer section-->
-
         <footer>
             <address>
-                <h4>Kontakt</h4>
-                    <p>Telefonnummer: <a href="tel:2233642526">Ring til os</a></p>
-                    <p>E-Mail: <a href="mailto:nera@iba.dk">Skriv til os</a></p>
+                <h5>Kontakt</h5>
+                        <p>
+                            <i class="fa-regular fa-envelope"></i>
+                            Mail: <a href="mailto:livsbalance@info">livsbalance@info.dk</a>
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            Telefon: <a href="tel:+4530567359">+45 30 56 73 59</a>
+                        </p>
             </address>
+
             <section class="social-media">
-                <h4>Sociale medier</h4>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">LinkedIn</a>
+                <h5>Sociale medier</h5>
+                    <a href="#"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i>Facebook</a>
+                    
+                    <a href="#"><i class="fa-brands fa-square-linkedin"></i>Linkedin</a>                
             </section>
         </footer>
 </body>
