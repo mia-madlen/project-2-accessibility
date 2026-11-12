@@ -13,8 +13,37 @@
 
     <!--Navigation-->
     <header>
+        <nav>
+        <a href="#">Logo</a>
+        <button 
+          id="magnifying-glass"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open seach">
+          
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+ 
+        <button
+          id="bars"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open navigation">
+          
+          <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!--Navigation-->
+        <ul id="menu">
+          <!-- id="menu" references the button with aria-controls -->
+          <li><a href="/index.html">Forside</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Inspiration</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a class="active" href="#">Kontakt</a></li>
 
-
+        </ul>
+      </nav>
     </header>
 
 
@@ -22,46 +51,48 @@
 
     <!--Brødkrummesti-->
 
-    <section class="kontakt-intro">
-        <div class="kontaktkort">
-            <h1>Kontakt</h1>
-            <p>Mia-Madlen Mertz</p>
-            <p><em>Psykolog</em></p>
+    <section class="kontaktkort">
+        <h1>Kontakt</h1>
+        <p>Mia-Madlen Mertz</p>
+        <p><em>Psykolog</em></p>
 
-            <address class="kontaktoplysninger">
-                <a href="tel:+4530567359">
-                    <i class="fa-solid fa-phone-volume"></i>+45 30 56 73 59
-                </a>
+        <address class="kontaktoplysninger">
+            <a href="tel:+4530567359">
+                <i class="fa-solid fa-phone-volume"></i>+45 30 56 73 59
+            </a>
 
-                <a href="mailto:livsbalance@info.dk">
-                    <i class="fa-regular fa-envelope"></i>livsbalance@info.dk
-                </a>
-            </address>
-        </div>
+            <a href="mailto:livsbalance@info.dk">
+                <i class="fa-regular fa-envelope"></i>livsbalance@info.dk
+            </a>
+        </address>
+    </section>
+        
+    <!-- hjælp section -->
+        <section class="hjælp-section">
+            <div class="hjælp-box">
 
-            <!-- hjælp section -->
-        <div class="hjælp-box">
-            <p>
+                <p>
                 Find hjælp, <br>
                 rådgivning <br>
                 og forståelse!
-            </p>
-                
-            <i class="fa-solid fa-phone-volume"></i>
-            
-            <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
-        </div>
+                </p>
+                <i class="fa-solid fa-phone-volume"></i>
+    
+            </div>
+                <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
+        </section>
     
         <!--Citat sektion-->
-        <blockquote>
-            <p>"Plads til at være dig!"</p>
-        </lockquote>
-    </section>
+        <section class="citat-section">
+            <blockquote>
+                <p>"Du må bruge plads til at være dig!"</p>
+            </blockquote>
+        </section>
 
 
     <!--Kontaktform--> 
      <section class="kontaktform">
-        <h1>Kontaktformular</h1>
+        <h2>Kontaktformular</h2>
         <p class="kontakt-tekst">Skriv gerne via formularen, <br> hvis du har noget på hjertet eller har spørgsmål, så vender jeg tilbage til dig!</p>
 
         
@@ -98,7 +129,7 @@
     <!--footer section-->
         <footer>
             <address>
-                <h4>Kontakt</h4>
+                <h3>Kontakt</h3>
                     <p>
                         <i class="fa-regular fa-envelope"></i>
                         Mail: <a href="mailto:livsbalance@info">livsbalance@info.dk</a>
@@ -111,7 +142,7 @@
             </address>
 
             <section class="social-media">
-                <h4>Sociale medier</h4>
+                <h3>Sociale medier</h3>
                     <a href="#"><i class="fa-brands fa-instagram"></i>
                         Instagram</a>
                 

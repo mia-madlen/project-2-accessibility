@@ -154,15 +154,7 @@ nav .show {
     align-items: center;
 }
 
-.hjælp-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.2rem 1rem 1rem;
-}
-
-
-.hjælp-content p {
+.hjælp-box p {
     font-size: 1.19rem;
     line-height: 28.5px;
     margin: 1rem 1rem 1rem 1rem;
@@ -170,11 +162,13 @@ nav .show {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0 2rem 1rem;
 }
 
 .fa-phone-volume {
-    font-size: 4rem;
-    color: #FFFAF2;    
+    font-size: 3.5rem;
+    color: #FFFAF2;  
+    margin: 0 2rem 1rem 0;  
 }
 
 .hjælp-button {
