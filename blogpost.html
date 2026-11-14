@@ -5,8 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blogindlæg</title>
     <link rel="stylesheet" href="css/blogpost.css">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/2dcce8b330.js" crossorigin="anonymous"></script>
 </head>
 <body>
+     <a href="#hovedindhold" class="screen-reader-text">hop ned til hovedindhold</a>
+
+    <!--Navigation-->
+    <header>
+        <nav>
+        <a href="/index.html"><img class="logo" src="/img/Logo.png" alt=""></a>
     
+
+        <button 
+          id="magnifying-glass"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open seach">
+          
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+ 
+        <button
+          id="bars"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="open navigation">
+          
+          <i class="fa-solid fa-bars"></i>
+        </button>
+       
+        <!--Navigation-->
+        <ul id="menu">
+          <!-- id="menu" references the button with aria-controls -->
+          <li><a href="/index.html">Forside</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Inspiration</a></li>
+          <li><a href="#">Om mig</a></li>
+          <li><a href="/blogpost.html">Kontakt</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+
+<main id="hovedindhold">
+
+
+</main>
+    <article>
+        <h1>Overskrift</h1>
+            <section class="Forord">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nostrum maxime dolores laborum, deleniti ratione deserunt! Enim expedita, tenetur quod architecto, vel laudantium nulla, recusandae illo nobis minima atque suscipit.</p>
+            </section>
+
+            <img src="/img/Husk at være gode ved dig selv.jpeg" alt="">
+
+            <section class="første afsnit">
+                <h2>Underoverskrift</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse!</p>
+            </section>
+
+            <img src="/img/Underbillede blogindlæg.jpeg" alt="">
+
+            <section class="andet afsnit">
+                <h3>Underoverskrift</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id, odio explicabo rerum quo aspernatur quibusdam at exercitationem? Quo perferendis quasi adipisci ut esse. Commodi eos magnam adipisci ab esse!</p>
+            </section>
+    </article>
+
+            <!-- hjælp section -->
+          <section class="hjælp-section">
+            <div class="hjælp-box">
+
+                    <p>
+                    Find hjælp, <br>
+                    rådgivning <br>
+                    og forståelse!
+                    </p>
+                    <i class="fa-solid fa-phone-volume"></i>
+    
+            </div>
+             <a class="hjælp-button" href="#">Har du brug for hjælp?</a>
+          </section>
+
+
+    <!--footer section-->
+        <footer>
+            <address>
+                <h5>Kontakt</h5>
+                        <p>
+                            <i class="fa-regular fa-envelope"></i>
+                            Mail: <a href="mailto:livsbalance@info">livsbalance@info.dk</a>
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            Telefon: <a href="tel:+4530567359">+45 30 56 73 59</a>
+                        </p>
+            </address>
+
+            <section class="social-media">
+                <h5>Sociale medier</h5>
+                    <a href="#"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a>
+                
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i>Facebook</a>
+                    
+                    <a href="#"><i class="fa-brands fa-square-linkedin"></i>Linkedin</a>                
+            </section>
+        </footer>
 </body>
 </html>

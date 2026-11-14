@@ -24,6 +24,11 @@ body {
   opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
 }
 
+.logo {
+    max-width: 100px;
+    margin-left: -2rem;
+}
+
 header:nth-of-type(1) {
     display: inline;
 }
@@ -83,9 +88,6 @@ nav .show {
       z-index: 1;
     }
 
-.search-icon {
-    text-decoration-style: none;
-}
 
 /*Hero section*/
 
@@ -551,6 +553,8 @@ nav a {
 .citat-section-2 {
     margin-right: 37%;
     height: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
 }
 
 .citat-section-2 blockquote {
@@ -563,6 +567,7 @@ nav a {
     position: absolute;
     right: 0;
     height: 50%;
+    margin-top: -26.5rem;
 }
 
 
