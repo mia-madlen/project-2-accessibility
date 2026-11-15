@@ -6,6 +6,7 @@
 body {
     background-color: #FFFAF2;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .screen-reader-text {
@@ -90,8 +91,54 @@ nav .show {
       z-index: 1;
     }
 
+h1 {
+    padding: 2rem 2rem 1rem 2.25rem;
+}
 
+.forord {
+    padding: 0.25rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+}
 
+h2 {
+    font-size: 1.75rem;
+    padding: 2rem;
+}
+
+.første-afsnit img {
+    border: solid 0.1rem #111E38;
+    border-radius: 1.6rem;
+    margin: 0 0 1rem 1.3rem;
+}
+
+.andet-afsnit img {
+    border: solid 0.1rem #111E38;
+    border-radius: 1.6rem;
+    margin: 0 0 1rem 1.3rem;
+}
+
+.cropped {
+    object-position: center;
+    object-fit: cover;
+    width: 350px;
+    height: 220px;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.25rem;
+}
+
+.første-afsnit p, .andet-afsnit p, .forord {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem
+}
 
 
 
@@ -102,7 +149,7 @@ nav .show {
     min-height: 8rem;
     background-color: #C15400;
     border-radius: 1.6rem;
-    margin: 3.5rem auto;
+    margin: 2rem auto;
     margin-bottom: 6.5rem;
 }
 
@@ -120,6 +167,8 @@ nav .show {
 
 .hjælp-box p {
     font-size: 1.19rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 28.5px;
     margin: 1rem 1rem 1rem 1rem;
     color: #FFFAF2;
@@ -132,7 +181,7 @@ nav .show {
 .fa-phone-volume {
     font-size: 3.5rem;
     color: #FFFAF2;  
-    margin: 0 2rem 1rem 0;  
+    margin: 0 2rem 2rem 0;  
 }
 
 .hjælp-button {
@@ -142,11 +191,11 @@ nav .show {
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: bold;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.15rem 0.5rem 0.15rem;
     border-radius: 1.6rem;
     border: 0.3rem solid #FFFAF2;
     text-align: center;
-    margin: -4rem 1rem 1rem 1rem;
+    margin: -4.5rem 1rem 1rem 1rem;
 }
 
 .hjælp-button:hover {
@@ -243,9 +292,21 @@ footer address p, footer address a, footer .social-media a {
 
 @media screen and (min-width: 1024px) {
 
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-auto-flow: row;
+    column-gap: 2.5rem;
+    row-gap: 1.5rem;
+    align-items: start;
+}
+
+
 
 /*navigation*/
-
+header {
+    grid-column: 1 / -1;
+}
 
 nav #bars {
     display: none;
@@ -282,10 +343,130 @@ nav a {
     text-decoration: none;
 }
 
+main:empty {
+    display: none;
+}
+
+
+
+/*article section*/
+article {
+    display: contents;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 1rem auto 0;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+
+.forord {
+    grid-column: 1 / -1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0 1.5rem;
+    font-size: 1.5rem;
+}
+
+
+
+/*første afsnit*/
+.første-afsnit {
+    grid-column: 1 / -1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+    align-items: start;
+    border-top: 1px solid #111E38;
+}
+
+.første-afsnit h2 {
+    grid-column: 1;
+    padding: 2rem 0 0.5rem;
+    font-size: 2rem;
+}
+
+.første-afsnit img {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.første-afsnit p {
+    grid-column: 1;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
 
 
 
+/*andet-afsnit*/
+.andet-afsnit {
+   grid-column: 1 / -1;
+   width: 90%;
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+
+.andet-tekst img {
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    justify-self: start;
+    align-self: stretch;
+    width: 90%;
+    max-width: 400px;
+    height: 270px;
+    margin: 0;
+    border: solid 1px #111E38;
+    border-radius: 1.6rem;
+}
+
+.andet-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    column-gap: 3rem;
+    align-items: start;
+    width: 100%;
+}
+
+.andet-tekst h2 {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0 0 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.andet-tekst h3, .andet-tekst p {
+    grid-column: 2;
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1.875rem;
+}
+
+
+
+
+/*Hjælp section*/
+.andet-afsnit .hjælp-section {
+    width: 18rem;
+    margin: -45rem 3.5rem 45rem;
+}
 
 
 
@@ -294,6 +475,8 @@ nav a {
 /*footer*/
 
 footer {
+    grid-column: 1 / -1;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 4rem 0 5rem 2rem;
@@ -308,10 +491,15 @@ footer .social-media {
     margin-right: -2rem;
 }
 
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
