@@ -27,6 +27,7 @@ body {
 .logo {
     max-width: 100px;
     margin-left: -2rem;
+    margin-top: 0.25rem;
 }
 
 header:nth-of-type(1) {
@@ -296,7 +297,6 @@ h2 {
 }
 
 .blog-button {
-    display: inline-block;
     background-color: #31688E;
     color: #FFFAF2;
     font-size: 1.125rem;
@@ -457,7 +457,6 @@ footer address p, footer address a, footer .social-media a {
 
 /*navigation*/
 
-
 nav #bars {
     display: none;
 }
@@ -539,6 +538,7 @@ nav a {
   .tekst-section {
     width: 100%;
     margin: 1rem 0 2rem 5rem;
+    line-height: 2.25rem;
   }
 
   .citat-section-1 {
@@ -598,6 +598,14 @@ nav a {
 
 .blog-card {
     min-height: 30rem;
+}
+
+.blog-content p {
+    line-height: 2.25rem;
+}
+
+.blog-content h4 {
+    line-height: 2.5rem;
 }
 
 .view-all-button {
