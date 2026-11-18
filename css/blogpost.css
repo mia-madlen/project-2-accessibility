@@ -29,7 +29,7 @@ body {
 
 .logo {
     max-width: 100px;
-    margin-left: -2rem;
+    margin-left: -1.5rem;
     margin-top: 0.55rem;
 }
 
@@ -54,8 +54,7 @@ nav ul {
     font-family: 'Times New Roman', Times, serif;
 }
 
-nav #bars {
-    display: flex;
+.nav-mobil-element {
     color: #FFFAF2;
     font-size: 2rem;
     cursor: pointer;
@@ -63,14 +62,10 @@ nav #bars {
     background-color: transparent;
 }
 
-nav #magnifying-glass {
+.nav-mobil-ikoner {
     display: flex;
-    color: #FFFAF2;
-    font-size: 2rem;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    margin-left: 16rem;
+    align-items: center;
+    margin-left: auto;
 }
 
 nav ul li {
@@ -79,6 +74,17 @@ nav ul li {
       margin: 2rem auto 1rem auto;
       align-self: center;
     }
+
+nav ul li a {
+    color: #111E38;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: #31688E;
+}
 
 nav .show {
       display: flex;
@@ -328,27 +334,35 @@ body {
 
 
 .logo {
-    margin-top: 1.5rem;
-    margin-left: -4rem;
+    margin-top: 0.5rem;
+    margin-left: -0.5rem;
 }
 
 /*navigation*/
 
-header {
-    grid-column: 1 / -1;
+.logo {
+    margin-top: 0.25rem;
+    margin-left: -0.5rem;
 }
 
 nav #bars {
     display: none;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     border: none;
+    margin-left: auto;
+    padding: 0;
 }
 
 nav ul li {
@@ -361,17 +375,26 @@ nav ul.show {
     background-color: transparent;
 }
 
-nav ul a:hover {
+nav ul li a {
+    color: #FFFAF2;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+nav ul li a:hover {
     color: #111E38;
 }
 
-nav a {
-    color: #FFFAF2;
-    margin: 1rem 1rem 2rem 1rem;
-    padding: 1rem 1rem 1rem 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
+.nav-mobil-ikoner {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
 }
+
 
 .main {
     grid-column: 1 / -1;
@@ -518,21 +541,35 @@ h1 {
 /*footer*/
 
 footer {
-    grid-column: 1 / -1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4rem 0 5rem 2rem;
+    align-items: flex-start;
+    padding: 4rem 3rem 5rem;
 }
 
 footer address {
-    margin-right: -1rem;
-    margin-left: 2rem;
+    margin: 0 0 0 7rem;
+}
+
+footer address h5 {
+    margin: 2rem 0 1.5rem 0rem;
+    text-align: left;
 }
 
 footer .social-media {
-    margin-right: -2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0rem;
+    align-items: flex-start;
 }
+
+footer .social-media h5 {
+    text-align: center;
+    margin: 2rem 0 0 0 ;
+}
+
+
 
 }
 
