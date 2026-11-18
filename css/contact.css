@@ -534,7 +534,7 @@ main {
     grid-column: 1 / -1;
     width: 35%;
     max-width: 55rem;
-    margin: 5rem auto 4rem;
+    margin: 5rem auto 10rem;
     padding: 2.5rem 3rem;
 }
 
