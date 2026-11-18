@@ -245,6 +245,7 @@ h2 {
 
 .kontakt-tekst{
 	font-size: 1.125rem;
+    line-height: 1.7rem;
     color: #FFFAF2;
     margin: auto auto 2rem 0.75rem;
     font-family: 'Times New Roman', Times, serif;
@@ -274,6 +275,7 @@ select, input[type=radio], input[type=submit] {
 .samtykke {
     color: #FFFAF2;
     font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 input[type=submit] {
