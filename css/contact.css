@@ -256,7 +256,7 @@ h2 {
   background-color: #111E38;
   padding: 1.3em;
   width: 90%;
-  margin: 4rem auto; /*Centrerer elementet på siden*/
+  margin: 4rem auto 7rem; /*Centrerer elementet på siden*/
 }
 
 input[type=text], input[type=email], input[type=tel], select, textarea {
