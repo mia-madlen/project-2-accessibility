@@ -541,9 +541,10 @@ nav ul li a:hover {
     display: none;
   }
 
-  
+
   .hero img {
     width: 100%;
+    margin-top: -6rem;
     height: auto;
   }
 
