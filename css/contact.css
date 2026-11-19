@@ -398,7 +398,10 @@ footer address p, footer address a, footer .social-media a {
     font-size: 3rem;
 }
 
-
+*:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 3px #111E38, 0 0 0 5px #FFFAF2;
+}
 
 /*Desktop version*/
 
