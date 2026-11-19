@@ -39,7 +39,7 @@ header:nth-of-type(1) {
     display: inline;
 }
 
-nav {
+.hovedmenu {
     background-color: #31688E;
     height: 5rem;
     padding: 0 1.5rem;
@@ -416,7 +416,7 @@ nav #bars {
     display: none;
 }
 
-nav {
+.hovedmenu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -452,7 +452,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #111E38;
+    color: #FFFAF2;
+    text-decoration: underline;
 }
 
 .nav-mobil-ikoner {

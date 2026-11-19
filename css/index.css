@@ -515,7 +515,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #111E38;
+    color: #FFFAF2;
+    text-decoration: underline;
 }
 
 .nav-mobil-ikoner {
